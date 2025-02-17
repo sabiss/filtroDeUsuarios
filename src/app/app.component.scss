@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.containerEsqueda {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.containerDireita {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  display: flex;
+}
+.containerInputs {
+  flex-grow: 1;
+}
+.containerUsuarios {
+  height: 80%;
+}
+app-detalhes-usuario {
+  width: 100%;
+}
