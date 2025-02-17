@@ -1,0 +1,40 @@
+<div class="inputs">
+  <form>
+    <div class="inputNome">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ex. Fulano Barreto" value="" />
+      </mat-form-field>
+    </div>
+
+    <div class="seletorData">
+      <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" />
+          <input matEndDate placeholder="End date" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <div class="seletorStatus">
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select>
+          @for (pessoa of pessoas; track pessoa) {
+          <mat-option [value]="pessoa.value">{{ pessoa.viewValue }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="botao">
+      <button mat-flat-button>Basic</button>
+    </div>
+  </form>
+</div>
