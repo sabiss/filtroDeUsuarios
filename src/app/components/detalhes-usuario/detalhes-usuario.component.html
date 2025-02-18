@@ -16,21 +16,21 @@
     <mat-list-item role="listitem"
       ><span class="titulo">Telefone: </span
       ><span class="texto">{{
-        usuarioParaExibir.telefone
+        usuarioParaExibir.telefone | telefone
       }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Endereço: </span
       ><span class="texto">{{
-        usuarioParaExibir.endereco?.rua
+        usuarioParaExibir.endereco | endereco
       }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Status: </span
       ><span class="texto">{{
-        usuarioParaExibir.status ? "Ativo" : "Inativo"
+        usuarioParaExibir.ativo | status
       }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
@@ -42,7 +42,7 @@
     <mat-list-item role="listitem"
       ><span class="titulo">Data de Cadastro: </span
       ><span class="texto">{{
-        usuarioParaExibir.dataCadastro
+        usuarioParaExibir.dataCadastro | date : "dd/MM/yyyy"
       }}</span></mat-list-item
     >
   </mat-list>
