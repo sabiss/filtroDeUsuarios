@@ -1,0 +1,42 @@
+<div class="lista-usuarios">
+  <table mat-table [dataSource]="listaUsuarios">
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        (click)="usuarioSelecionado(element)"
+        class="listaUsuarioItem"
+      >
+        {{ element.nome }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dataCadastro">
+      <th mat-header-cell *matHeaderCellDef>Data de Cadastro</th>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        (click)="usuarioSelecionado(element)"
+        class="listaUsuarioItem"
+      >
+        {{ element.dataCadastro }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        (click)="usuarioSelecionado(element)"
+        class="listaUsuarioItem"
+      >
+        {{ element.status }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
