@@ -7,8 +7,18 @@ import { IEndereco } from '../interfaces/usuario/endereco.interface';
 })
 export class EnderecoPipe implements PipeTransform {
   transform(endereco: IEndereco): string {
-    const enderecoFormatado = `${endereco.rua}, ${endereco.numero}, ${endereco.cidade} - ${endereco.estado}`;
+    const enderecoInvalido =
+      !endereco?.rua ||
+      !endereco?.numero ||
+      !endereco?.cidade ||
+      !endereco?.estado;
 
-    return enderecoFormatado;
+    if (enderecoInvalido) {
+      return 'Endereço indisponível ou inválido';
+    } else {
+      const enderecoFormatado = `${endereco.rua}, ${endereco.numero}, ${endereco.cidade} - ${endereco.estado}`;
+
+      return enderecoFormatado;
+    }
   }
 }
