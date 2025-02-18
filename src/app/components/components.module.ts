@@ -4,6 +4,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+import { PipeModule } from '../pipes/pipe.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,7 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
     InputsComponent,
     ListaUsuariosComponent,
   ],
-  imports: [CommonModule, AngularMaterialModule],
+  imports: [CommonModule, AngularMaterialModule, PipeModule],
   exports: [DetalhesUsuarioComponent, InputsComponent, ListaUsuariosComponent], //pra aparecer no AppComponent tem que estar exportado
 })
 export class ComponentsModule {}
