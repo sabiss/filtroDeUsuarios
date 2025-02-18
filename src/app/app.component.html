@@ -3,9 +3,15 @@
     <div class="containerInputs">
       <app-inputs></app-inputs>
     </div>
-    <div class="containerUsuarios"></div>
+    <div class="containerUsuarios">
+      <app-lista-usuarios
+        (usuarioSelecionadoParaDetalhes)="receberUsuario($event)"
+      ></app-lista-usuarios>
+    </div>
   </div>
   <div class="containerDireita">
-    <app-detalhes-usuario></app-detalhes-usuario>
+    <app-detalhes-usuario
+      [usuarioParaExibir]="UsuarioParaMostrarDetalhes"
+    ></app-detalhes-usuario>
   </div>
 </main>
