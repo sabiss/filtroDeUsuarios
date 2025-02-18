@@ -4,31 +4,46 @@
       ><span class="titulo">Detalhes do Usuário</span></mat-list-item
     >
     <mat-list-item role="listitem"
-      ><span class="titulo">Nome:</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Nome: </span
+      ><span class="texto">{{ usuarioParaExibir.nome }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Email:</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Email: </span
+      ><span class="texto">{{ usuarioParaExibir.email }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Telefone:</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Telefone: </span
+      ><span class="texto">{{
+        usuarioParaExibir.telefone
+      }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Endereço</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Endereço: </span
+      ><span class="texto">{{
+        usuarioParaExibir.endereco?.rua
+      }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Status:</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Status: </span
+      ><span class="texto">{{
+        usuarioParaExibir.status ? "Ativo" : "Inativo"
+      }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Função</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Função: </span
+      ><span class="texto">{{ usuarioParaExibir.funcao }}</span></mat-list-item
+    >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
-      ><span class="titulo">Data de Cadastro:</span><span class="texto"></span
-    ></mat-list-item>
+      ><span class="titulo">Data de Cadastro: </span
+      ><span class="texto">{{
+        usuarioParaExibir.dataCadastro
+      }}</span></mat-list-item
+    >
   </mat-list>
 </div>
