@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IUsuario } from './interfaces/usuario/usuario.interface';
+import { ListaUsuarios } from './data/lista-usuarios';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { IUsuario } from './interfaces/usuario/usuario.interface';
 })
 export class AppComponent {
   UsuarioParaMostrarDetalhes: IUsuario = {} as IUsuario;
+  showDetalhesUsuario: boolean = false;
+  listaDeUsuarios: IUsuario[] = ListaUsuarios;
 
   receberUsuario(usuario: IUsuario) {
-    console.log('executou');
     this.UsuarioParaMostrarDetalhes = usuario;
+    this.showDetalhesUsuario = true;
   }
 }

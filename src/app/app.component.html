@@ -6,12 +6,14 @@
     <div class="containerUsuarios">
       <app-lista-usuarios
         (usuarioSelecionadoParaDetalhes)="receberUsuario($event)"
+        [listaUsuarios]="listaDeUsuarios"
       ></app-lista-usuarios>
     </div>
   </div>
   <div class="containerDireita">
     <app-detalhes-usuario
       [usuarioParaExibir]="UsuarioParaMostrarDetalhes"
+      *ngIf="showDetalhesUsuario"
     ></app-detalhes-usuario>
   </div>
 </main>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IUsuario } from '../../interfaces/usuario/usuario.interface';
 import { ListaUsuarios } from '../../data/lista-usuarios';
 
@@ -10,7 +10,8 @@ import { ListaUsuarios } from '../../data/lista-usuarios';
 })
 export class ListaUsuariosComponent {
   @Output() usuarioSelecionadoParaDetalhes = new EventEmitter<IUsuario>();
-  listaUsuarios: IUsuario[] = ListaUsuarios;
+  @Input({ required: true }) listaUsuarios: IUsuario[] = [];
+
   displayedColumns = ['nome', 'dataCadastro', 'status'];
 
   usuarioSelecionado(usuario: IUsuario) {
