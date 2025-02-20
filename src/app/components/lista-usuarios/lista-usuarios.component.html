@@ -8,7 +8,7 @@
         (click)="usuarioSelecionado(element)"
         class="listaUsuarioItem"
       >
-        {{ element.nome }}
+        {{ element.nome | campoVazio }}
       </td>
     </ng-container>
 
@@ -20,7 +20,7 @@
         (click)="usuarioSelecionado(element)"
         class="listaUsuarioItem"
       >
-        {{ element.dataCadastro | date : "dd/MM/yyyy" }}
+        {{ element.dataCadastro | date : "dd/MM/yyyy" | campoVazio }}
       </td>
     </ng-container>
 
@@ -32,7 +32,7 @@
         (click)="usuarioSelecionado(element)"
         class="listaUsuarioItem"
       >
-        {{ element.status }}
+        {{ element.ativo | status | campoVazio }}
       </td>
     </ng-container>
 

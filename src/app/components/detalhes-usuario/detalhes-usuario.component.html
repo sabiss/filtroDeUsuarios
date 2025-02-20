@@ -5,18 +5,22 @@
     >
     <mat-list-item role="listitem"
       ><span class="titulo">Nome: </span
-      ><span class="texto">{{ usuarioParaExibir.nome }}</span></mat-list-item
+      ><span class="texto">{{
+        usuarioParaExibir.nome | campoVazio
+      }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Email: </span
-      ><span class="texto">{{ usuarioParaExibir.email }}</span></mat-list-item
+      ><span class="texto">{{
+        usuarioParaExibir.email | campoVazio
+      }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Telefone: </span
       ><span class="texto">{{
-        usuarioParaExibir.telefone | telefone
+        usuarioParaExibir.telefone | telefone | campoVazio
       }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
@@ -30,19 +34,21 @@
     <mat-list-item role="listitem"
       ><span class="titulo">Status: </span
       ><span class="texto">{{
-        usuarioParaExibir.ativo | status
+        usuarioParaExibir.ativo | status | campoVazio
       }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Função: </span
-      ><span class="texto">{{ usuarioParaExibir.funcao }}</span></mat-list-item
+      ><span class="texto">{{
+        usuarioParaExibir.funcao | campoVazio
+      }}</span></mat-list-item
     >
     <mat-divider></mat-divider>
     <mat-list-item role="listitem"
       ><span class="titulo">Data de Cadastro: </span
       ><span class="texto">{{
-        usuarioParaExibir.dataCadastro | date : "dd/MM/yyyy"
+        usuarioParaExibir.dataCadastro | date : "dd/MM/yyyy" | campoVazio
       }}</span></mat-list-item
     >
   </mat-list>
