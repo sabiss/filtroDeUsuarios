@@ -18,11 +18,11 @@ Este projeto é uma aplicação Angular que permite a filtragem de usuários em 
 ## 🔧 Como Rodar o Projeto
 1. **Clone este repositório:**
    ```sh
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/sabiss/filtroDeUsuariosAngular
    ```
 2. **Acesse a pasta do projeto:**
    ```sh
-   cd nome-do-repositorio
+   cd filtroDeUsuariosAngular
    ```
 3. **Instale as dependências:**
    ```sh
