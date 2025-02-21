@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/filtroDeUsuariosAngular',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
