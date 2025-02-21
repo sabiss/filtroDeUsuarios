@@ -1,18 +1,30 @@
 <div class="inputs">
-  <form>
+  <div class="containerInputs">
     <div class="inputNome">
       <mat-form-field class="example-full-width">
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Ex. Fulano Barreto" value="" />
+        <input
+          matInput
+          placeholder="Ex. Fulano Barreto"
+          [(ngModel)]="dadosDeFiltragem.nome"
+        />
       </mat-form-field>
     </div>
 
     <div class="seletorData">
       <mat-form-field>
-        <mat-label>Enter a date range</mat-label>
+        <mat-label>Informe a data de início</mat-label>
         <mat-date-range-input [rangePicker]="picker">
-          <input matStartDate placeholder="Start date" />
-          <input matEndDate placeholder="End date" />
+          <input
+            matStartDate
+            placeholder="Start date"
+            [(ngModel)]="dadosDeFiltragem.dataInicio"
+          />
+          <input
+            matEndDate
+            placeholder="Informe a data de final"
+            [(ngModel)]="dadosDeFiltragem.dataFinal"
+          />
         </mat-date-range-input>
         <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle
@@ -26,15 +38,15 @@
     <div class="seletorStatus">
       <mat-form-field>
         <mat-label>Status</mat-label>
-        <mat-select>
-          @for (pessoa of pessoas; track pessoa) {
-          <mat-option [value]="pessoa.value">{{ pessoa.viewValue }}</mat-option>
+        <mat-select [(ngModel)]="dadosDeFiltragem.status">
+          @for (status of listaStatus; track status) {
+          <mat-option [value]="status.value">{{ status.descricao }}</mat-option>
           }
         </mat-select>
       </mat-form-field>
     </div>
     <div class="botao">
-      <button mat-flat-button>Filtrar</button>
+      <button mat-flat-button (click)="enviarDados()">Filtrar</button>
     </div>
-  </form>
+  </div>
 </div>
