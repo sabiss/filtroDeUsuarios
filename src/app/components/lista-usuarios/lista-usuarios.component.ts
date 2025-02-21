@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IUsuario } from '../../interfaces/usuario/usuario.interface';
 import { ListaUsuarios } from '../../data/lista-usuarios';
+import { DadosDeFiltragem } from '../../interfaces/dados-de-filtragem.interface';
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -11,6 +12,8 @@ import { ListaUsuarios } from '../../data/lista-usuarios';
 export class ListaUsuariosComponent {
   @Output() usuarioSelecionadoParaDetalhes = new EventEmitter<IUsuario>();
   @Input({ required: true }) listaUsuarios: IUsuario[] = [];
+  @Input() dadosDeUsuarioParaFiltragem: DadosDeFiltragem =
+    {} as DadosDeFiltragem;
 
   displayedColumns = ['nome', 'dataCadastro', 'status'];
 
