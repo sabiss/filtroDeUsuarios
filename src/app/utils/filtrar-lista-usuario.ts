@@ -27,7 +27,7 @@ const filtrarUsuarioPorStatus = (
   statusParaFiltrar: boolean | undefined,
   listaDeUsuarios: IUsuario[]
 ): IUsuario[] => {
-  if (!statusParaFiltrar) {
+  if (statusParaFiltrar == undefined) {
     return listaDeUsuarios;
   }
 
