@@ -1,12 +1,12 @@
 <main class="container">
   <div class="containerEsqueda">
     <div class="containerInputs">
-      <app-inputs></app-inputs>
+      <app-inputs (enviarDadosEmit)="executarFiltragem($event)"></app-inputs>
     </div>
     <div class="containerUsuarios">
       <app-lista-usuarios
-        (usuarioSelecionadoParaDetalhes)="receberUsuario($event)"
-        [listaUsuarios]="listaDeUsuarios"
+        (usuarioSelecionadoParaDetalhes)="receberUsuarioParaDetalhes($event)"
+        [listaUsuarios]="listaUsuariosFiltrados"
       ></app-lista-usuarios>
     </div>
   </div>
