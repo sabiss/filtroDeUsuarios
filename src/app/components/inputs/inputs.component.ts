@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { DadosDeFiltragem } from '../../interfaces/dados-de-filtragem.interface';
 
 @Component({
   selector: 'app-inputs',
@@ -7,10 +8,28 @@ import { Component } from '@angular/core';
   styleUrl: './inputs.component.scss',
 })
 export class InputsComponent {
-  pessoas = [
+  @Output() enviarDadosEmit = new EventEmitter<DadosDeFiltragem>();
+
+  dadosDeFiltragem: DadosDeFiltragem = {
+    nome: '',
+    dataInicio: undefined,
+    dataFinal: undefined,
+    status: undefined,
+  };
+
+  enviarDados() {
+    this.dadosDeFiltragem.nome.toLowerCase();
+    this.enviarDadosEmit.emit(this.dadosDeFiltragem);
+  }
+
+  listaStatus = [
     {
-      value: 'sabrina',
-      viewValue: 'sabrina',
+      value: true,
+      descricao: 'Ativo',
+    },
+    {
+      value: false,
+      descricao: 'Inativo',
     },
   ];
 }
